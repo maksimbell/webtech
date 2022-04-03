@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Product-card</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Quicksand:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/board-game.png">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -85,7 +92,30 @@
         </div>
     </div>
     <div class="main">
-
+        <div class="product-top">
+            <div class="container product-top__container">
+                <div class="product-top__block">
+                    <h1 class="product-top__title">Dune: Imperium</h1>
+                    <!-- <p class="product-top__description">2-4 players, 35+ min, 7+</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="product-content">
+            <div class="container product-container">
+                <img class="product-image" src="assets/img/product_1.jpg"></img>
+                <div class="product-content__block">
+                    <h2 class="product-price">23$</h2>
+                    <form action="" class="product-form">
+                        <label for="" class="product-form__state"></label>
+                        <select name="" id="" class="product-form__combobox">
+                            <option value="">New</option>
+                            <option value="">Good</option>
+                        </select>
+                        <button class="product-form__button button-add">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <div class="container">
