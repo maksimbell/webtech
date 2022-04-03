@@ -5,6 +5,12 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+:root {
+    --percent-complexity: 0.80;
+    --percent-quality: 0.60;
+    --percent-interaction: 0.80;
+}
+
 .container {
     max-width: 1260px;
     margin: 0 auto;
@@ -484,35 +490,128 @@ a.slide__next,
     height: 120px;
 }
 
-.product-top__container{
+.product-top__container {
     display: flex;
     align-items: center;
 }
 
-.product-content{
-    height: 400px;
-}
-
-.product-content__block{
-
-}
-
-.product-image{
-    height: 100%;
-}
-
-.product-container{
+.product-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-direction: row;
     align-items: stretch;
 }
 
-.product-content__block{
-    margin: 50px 0;
-    width: 100%;
-    /* ? */
+.product-form__paragraph {
+    color: coral;
+    font-size: 22px;
+    margin-top: 20px;
 }
 
-.product-form{
+.product-image {
+    height: 100%;
+    align-self: center;
+}
+
+.product-content__block {
+    margin: 50px 0;
+    padding: 0 90px;
+    flex-grow: 1;
+}
+
+.product-form__interface {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-form__button {
+    flex-grow: 1;
+    margin: 5px 0;
+    border: 2px solid #212121;
+    cursor: pointer;
+    padding: 10px;
+    background-color: white;
+    transition: 1s;
+}
+
+.product-form__button:hover {
+    border-color: coral;
+}
+
+.product-info {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid #212121;
+    padding: 10px;
+}
+
+.product-description {
+    background: linear-gradient(90deg, rgb(255, 156, 156) 0%, rgb(255, 186, 95) 100%);
+}
+
+/* ______________________________________ */
+
+.awards-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* gap: 40px; */
+}
+
+.description-left{
+    text-align: center;
+    padding: 20px;
+}
+
+.awards-bar__item svg {
+    margin: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+.progress-ring__complexity{
+    stroke-dashoffset: calc(2 * 3.14 * 32 *(1 - var(--percent-complexity)));
+    stroke-dasharray: calc(2 * 3.14 * 32 ) calc(2 * 3.14 * 32 );
+}
+
+.progress-ring__quality{
+    
+    stroke-dashoffset: calc(2 * 3.14 * 32 *(1 - var(--percent-interaction)));
+    stroke-dasharray: calc(2 * 3.14 * 32 ) calc(2 * 3.14 * 32 );
+}
+
+.progress-ring__interaction{
+    stroke-dashoffset: calc(2 * 3.14 * 32 *(1 - var(--percent-interaction)));
+    stroke-dasharray: calc(2 * 3.14 * 32 ) calc(2 * 3.14 * 32 );
+}
+
+.progress-ring__circle{
+   transform-origin: center;
+   transform: rotate(-90deg);
+}
+
+circle{
+    stroke: white;
+    stroke-width: 4px;
+    fill: transparent;   
+}
+
+.awards-bar__item{
+    text-align: center;
+    margin: 0 21px 0 21px;
+    flex: 1;
+}
+
+.description-main{
+    padding: 20px;
+}
+
+.description-main__paragraph, .video{
+    margin: 20px 0;
 }
