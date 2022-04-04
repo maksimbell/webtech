@@ -168,10 +168,12 @@
 .nav-list__link {
     text-decoration: none;
     display: flex;
-    padding: 20px;
+    height: 100%;
     justify-content: space-around;
     color: #0a316b;
     text-transform: uppercase;
+    align-items: center;
+    text-align: center;
 }
 
 .slider-container {
@@ -441,46 +443,6 @@ a.slide__next,
     background-size: 80%;
 }
 
-@media screen and (max-width: 1050px) {
-    .header-content {
-        justify-content: flex-start;
-    }
-
-    .header-left {
-        /* align-self: stretch; */
-        width: 100%;
-    }
-
-    .greeting {
-        flex: 2 1 auto;
-    }
-
-}
-
-@media screen and (max-width: 580px) {
-    .header-content {
-        display: block;
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-    .header__nav-container {
-        display: block;
-        height: 100%;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .search-form {
-        flex-direction: column;
-    }
-}
 
 
 /* ____________ PRODUCT_CARD _________________ */
@@ -511,6 +473,7 @@ a.slide__next,
 .product-image {
     height: 100%;
     align-self: center;
+    margin: 10px 0;
 }
 
 .product-content__block {
@@ -557,16 +520,20 @@ td {
 
 /* ______________________________________ */
 
-.awards-bar{
+.awards-bar {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* gap: 40px; */
+    gap: 13px;
 }
 
-.description-left{
-    text-align: center;
+.description-left {
+    /* text-align: center; */
     padding: 20px;
+}
+
+.description-left__title{
+    text-align: center;
 }
 
 .awards-bar__item svg {
@@ -575,43 +542,123 @@ td {
     width: 80px;
 }
 
-.progress-ring__complexity{
+.progress-ring__complexity {
     stroke-dashoffset: calc(2 * 3.14 * 32 *(1 - var(--percent-complexity)));
-    stroke-dasharray: calc(2 * 3.14 * 32 ) calc(2 * 3.14 * 32 );
+    stroke-dasharray: calc(2 * 3.14 * 32) calc(2 * 3.14 * 32);
 }
 
-.progress-ring__quality{
-    
+.progress-ring__quality {
+
     stroke-dashoffset: calc(2 * 3.14 * 32 *(1 - var(--percent-interaction)));
-    stroke-dasharray: calc(2 * 3.14 * 32 ) calc(2 * 3.14 * 32 );
+    stroke-dasharray: calc(2 * 3.14 * 32) calc(2 * 3.14 * 32);
 }
 
-.progress-ring__interaction{
+.progress-ring__interaction {
     stroke-dashoffset: calc(2 * 3.14 * 32 *(1 - var(--percent-interaction)));
-    stroke-dasharray: calc(2 * 3.14 * 32 ) calc(2 * 3.14 * 32 );
+    stroke-dasharray: calc(2 * 3.14 * 32) calc(2 * 3.14 * 32);
 }
 
-.progress-ring__circle{
-   transform-origin: center;
-   transform: rotate(-90deg);
+.progress-ring__circle {
+    transform-origin: center;
+    transform: rotate(-90deg);
 }
 
-circle{
+circle {
     stroke: white;
     stroke-width: 4px;
-    fill: transparent;   
+    fill: transparent;
 }
 
-.awards-bar__item{
+.awards-bar__item {
     text-align: center;
     margin: 0 21px 0 21px;
     flex: 1;
 }
 
-.description-main{
+.description-main {
     padding: 20px;
 }
 
-.description-main__paragraph, .video{
+.description-main__paragraph,
+.video {
     margin: 20px 0;
+}
+
+/* ____MAIN_PAGE_MEDIA_______ */
+
+@media screen and (max-width: 1050px) {
+    .header-content {
+        justify-content: flex-start;
+    }
+
+    .header-left {
+        /* align-self: stretch; */
+        width: 100%;
+    }
+
+    .greeting {
+        flex: 2 1 auto;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+    .header-content {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .header__nav-container {
+        display: block;
+        height: 100%;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .nav-list__item {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .search-form {
+        flex-direction: column;
+    }
+}
+
+/* ____PRODUCT_PAGE_MEDIA______ */
+
+@media screen and (max-width: 1024px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .awards-bar {
+        flex-direction: row;
+    }
+
+    .description-left__title{
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .description-main__video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .awards-bar {
+        flex-direction: column;
+    }
+
+    .product-image {
+        display: none;
+    }
 }
