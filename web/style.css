@@ -44,6 +44,10 @@
     padding: 0 20px;
 }
 
+.header-link:hover {
+    text-decoration: underline;
+}
+
 .header__content-block {
     background-color: rgb(255, 255, 255);
     height: 100%;
