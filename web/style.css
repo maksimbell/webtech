@@ -613,7 +613,13 @@ circle {
 }
 
 .contacts-map {
-    width: 300px;
+    padding: 20px;
+    width: 600px;
+}
+
+.contacts-map__map{
+    padding: 5px;
+    width: 100%;
 }
 
 .contact-form__area {
@@ -626,6 +632,10 @@ circle {
 .content-button {
     width: 100%;
     background-color: rgb(255, 144, 103);
+}
+
+.contacts-title{
+    font-size: 30px;
 }
 
 /* ____MAIN_PAGE_MEDIA_______ */
@@ -666,6 +676,10 @@ circle {
 
     .nav-list__item {
         padding: 10px;
+    }
+
+    .contacts-map{
+        display: none;
     }
 }
 
