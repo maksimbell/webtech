@@ -536,7 +536,7 @@ td {
     padding: 20px;
 }
 
-.description-left__title{
+.description-left__title {
     text-align: center;
 }
 
@@ -586,6 +586,46 @@ circle {
 .description-main__paragraph,
 .video {
     margin: 20px 0;
+}
+
+/* ___ CONTACS ___ */
+
+.contacts-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.contact-form {
+    padding: 20px;
+}
+
+.contact-form__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.form-input {
+    width: 40%;
+}
+
+.contacts-map {
+    width: 300px;
+}
+
+.contact-form__area {
+    resize: none;
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.content-button {
+    width: 100%;
+    background-color: rgb(255, 144, 103);
 }
 
 /* ____MAIN_PAGE_MEDIA_______ */
@@ -646,7 +686,7 @@ circle {
         flex-direction: row;
     }
 
-    .description-left__title{
+    .description-left__title {
         text-align: start;
     }
 }
