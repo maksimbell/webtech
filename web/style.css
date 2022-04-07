@@ -595,6 +595,10 @@ circle {
     margin: 20px 0;
 }
 
+.video{
+    border: 0px;
+}
+
 /* ___ CONTACS ___ */
 
 .contacts-container {
@@ -649,6 +653,12 @@ circle {
 .contacts-title {
     font-size: 30px;
 }
+
+.contacts-map__map {
+    width: 600px;
+    height: 100%;
+}
+
 
 /* ____MAIN_PAGE_MEDIA_______ */
 
