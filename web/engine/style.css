@@ -285,7 +285,7 @@ a.slide__next,
 
 .parallax {
     background-attachment: fixed;
-    background-image: url(assets/img/BoardGameo.jpg);
+    background-image: url(../assets/img/BoardGameo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -414,22 +414,22 @@ a.slide__next,
 }
 
 .icon-twitter {
-    background-image: url(assets/svg/1468368398_Twitter_Rounded_Solid.svg);
+    background-image: url(../assets/svg/1468368398_Twitter_Rounded_Solid.svg);
     /* filter: invert(70%); */
 }
 
 .icon-linkedin {
-    background-image: url(assets/svg/1468368407_LinkedIn_Rounded_Solid.svg);
+    background-image: url(../assets/svg/1468368407_LinkedIn_Rounded_Solid.svg);
     /* filter: invert(70%); */
 }
 
 .icon-google {
-    background-image: url(assets/svg/1468368412_Google_Rounded_Solid\ \(2\).svg);
+    background-image: url(../assets/svg/1468368412_Google_Rounded_Solid\ \(2\).svg);
     /* filter: invert(70%); */
 }
 
 .icon-facebook {
-    background-image: url(assets/svg/1468368389_Facebook_Rounded_Solid.svg);
+    background-image: url(../assets/svg/1468368389_Facebook_Rounded_Solid.svg);
 
 }
 
