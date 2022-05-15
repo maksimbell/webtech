@@ -1,7 +1,7 @@
 <div class="main">
     <div class="contacts-section">
         <div class="container contacts-container">
-            <form class="contact-form">
+            <form action="/regexp/pattern.php" class="contact-form" method="post">
                 <h2 class="contacts-title">Contact us</h2>
                 <div class="contact-form__contacts">
                     <input class="form-input product-form__button form-input__first" type="text"
@@ -12,11 +12,11 @@
                         required>
                 </div>
                 <div class="contact-form__message">
-                    <textarea class="form-input contact-form__area product-form__button" placeholder="Type your message"
+                    <textarea name="info" class="form-input contact-form__area product-form__button" placeholder="Type your message"
                         required></textarea>
                 </div>
                 <div class="contact-form__button">
-                    <button class="content-button product-form__button">Send Message</button>
+                    <input type="submit" class="content-button product-form__button"></input>
                 </div>
             </form>
             <div class="contacts-map">

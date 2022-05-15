@@ -1,5 +1,11 @@
 <?php
 
+$connect = new PDO("mysql:host=localhost;dbname=test_pdo", "root", "root");
+$connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$prods = $connect->prepare("SHOW COLUMNS FROM products");
+$prods->execute();
+$prods = $prods->fetchAll();
+
 $base_template = file_get_contents("../base-template.html");
 $main_content = file_get_contents("../main-content.html");
 $products_slide = file_get_contents("../products-slide.html");
@@ -20,24 +26,24 @@ $main_content = str_replace("{slides}", $slides, $main_content);
 
 $title = "Board games";
 
-$names = array("Dune: Imperium", 
-        "7 Wonders: Duel", 
-        "7 Wonders 2nd Edition", 
-        "7 Wonders Duel: Agora Expansion", 
-        "Jenga", 
-        "Patchwork", 
-        "Cluedo The Classic Mystery Game", 
-        "Carcassonne (2015)"
-    );
+// $names = array("Dune: Imperium", 
+//         "7 Wonders: Duel", 
+//         "7 Wonders 2nd Edition", 
+//         "7 Wonders Duel: Agora Expansion", 
+//         "Jenga", 
+//         "Patchwork", 
+//         "Cluedo The Classic Mystery Game", 
+//         "Carcassonne (2015)"
+//     );
 
-$prices = array("19", "22", "21", "13", "33", "17", "26", "30");
+// $prices = array("19", "22", "21", "13", "33", "17", "26", "30");
 
 $products = "";
 for ($i = 1; $i < 9; $i++) {
     $current_product = "";
     $current_product = str_replace("{id}", $i, $product_card);
-    $current_product = str_replace("{name}", $names[$i-1], $current_product);
-    $current_product = str_replace("{price}", $prices[$i-1], $current_product);
+    $current_product = str_replace("{name}", $prods[$i-1][0], $current_product);
+    $current_product = str_replace("{price}", $prods[$i-1][4], $current_product);
     $products = $products.$current_product;
 }
 
