@@ -4,9 +4,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $patterns = array(
         '/\.{1,3}|[?!]/um',
-        '/\d/um',
+        '/\b[\d]{1,}[,\/]?[\d]{0,}\b/um',
         '/[\s]{2,}/um',
-        '/([A-ZА-Я]){2,}/um'
+        '/\b([A-ZА-Я]){2,}\b/um'
     );
 
     $replacements = array(
