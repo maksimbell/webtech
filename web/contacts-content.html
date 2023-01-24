@@ -1,18 +1,18 @@
 <div class="main">
     <div class="contacts-section">
         <div class="container contacts-container">
-            <form action="/regexp/pattern.php" class="contact-form" method="post">
-                <h2 class="contacts-title">Contact us</h2>
+            <form action="/pattern.php" class="contact-form" method="post">
+                <h2 class="contacts-title">Subscription</h2>
                 <div class="contact-form__contacts">
                     <input class="form-input product-form__button form-input__first" type="text"
-                        placeholder="First Name" required>
+                        placeholder="First Name" name="name" required>
                     <input class="form-input product-form__button form-input__last" type="text" placeholder="Last Name"
-                        required>
+                        name="secname" required>
                     <input class="form-input product-form__button form-input__mail" type="text" placeholder="Your mail"
-                        required>
+                        name="email" required>
                 </div>
                 <div class="contact-form__message">
-                    <textarea name="info" class="form-input contact-form__area product-form__button" placeholder="Type your message"
+                    <textarea name="info" class="form-input contact-form__area product-form__button" placeholder="Write your wishes!"
                         required></textarea>
                 </div>
                 <div class="contact-form__button">
