@@ -2,7 +2,7 @@
 
 return [
     'host' => 'localhost',
-    'db_name' => 'test_pdo',
+    'db_name' => 'board-games',
     'username' => 'root',
     'password' => 'root',
     'charset' => 'utf8',
