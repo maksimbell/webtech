@@ -1,1 +1,1 @@
-WT 4 sem
+# Web technologies

@@ -111,3 +111,5 @@ phpstan.neon
 # Infection
 infection.json
 infection.log
+
+web/phpmyadmin
